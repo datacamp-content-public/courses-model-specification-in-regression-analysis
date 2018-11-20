@@ -58,6 +58,8 @@ data(CASchools)
 #3 Add a variable stratio to the dataset CASchools defined as students/teachers.
 CASchools$stratio <- CASchools$students/CASchools$teachers
 
+#4 Add a variable score to the dataset CASchools defined as the average of math and read.
+CASchools$score <- (CASchools$math + CASchools$read)/2)
 ```
 
 `@sct`
