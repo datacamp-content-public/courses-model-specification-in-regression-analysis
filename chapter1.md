@@ -50,7 +50,7 @@ English Learners.
 `@solution`
 ```{r}
 #1 Load the AER package.
-library(AER)
+library("AER")
 
 #2 Load the dataset CASchools.
 data(CASchools)
