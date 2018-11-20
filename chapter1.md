@@ -44,7 +44,6 @@ English Learners.
 
 #4 Add a variable score to the dataset CASchools defined as the average of math and read.
 
-
 ```
 
 `@solution`
@@ -59,7 +58,6 @@ data(CASchools)
 CASchools$stratio <- CASchools$students/CASchools$teachers
 
 #4 Add a variable score to the dataset CASchools defined as the average of math and read.
-CASchools$score <- (CASchools$math + CASchools$read)/2
 
 ```
 
