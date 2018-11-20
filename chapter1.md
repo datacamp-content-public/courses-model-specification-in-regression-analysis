@@ -48,7 +48,7 @@ CASchools$stratio <-
 CASchools$stratio <- CASchools$students/CASchools$teachers
 
 #2 Add a variable score to the dataset CASchools defined as the average of math and read.
-CASchools$score <- (CASchools$math + CASchools$read)/2)
+CASchools$score <- (CASchools$math + CASchools$read)/2
 
 #3 Obtain summary statistics for all variables in the dataset CASchools.
 summary(CASchools)
