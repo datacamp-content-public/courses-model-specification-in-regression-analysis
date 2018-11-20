@@ -18,9 +18,10 @@ students in the public assistance program, the percentage of students that quali
 English Learners.
 
 `@instructions`
-1) Load the dataset CASchools.
-2) Add a variable stratio to the dataset CASchools defined as students/teachers.
-3) Add a variable score to the dataset CASchools defined as the average of math and read.
+1) Load the AER package.
+2) Load the dataset CASchools.
+3) Add a variable stratio to the dataset CASchools defined as students/teachers.
+4) Add a variable score to the dataset CASchools defined as the average of math and read.
 
 `@hint`
 
@@ -32,12 +33,33 @@ English Learners.
 
 `@sample_code`
 ```{r}
+#1 Load the AER package.
+
+
+#2 Load the dataset CASchools.
+
+
+#3 Add a variable stratio to the dataset CASchools defined as students/teachers.
+CASchools$stratio <- 
+
+#4 Add a variable score to the dataset CASchools defined as the average of math and read.
+
 
 ```
 
 `@solution`
 ```{r}
+#1 Load the AER package.
 library(AER)
+
+#2 Load the dataset CASchools.
+data("CASchools")
+  
+#3 Add a variable stratio to the dataset CASchools defined as students/teachers.
+CASchools$stratio <- CASchools$students/CASchools$teachers
+  
+#4 Add a variable score to the dataset CASchools defined as the average of math and read.
+CASchools$score <- (CASchools$math + CASchools$read)/2)
 ```
 
 `@sct`
