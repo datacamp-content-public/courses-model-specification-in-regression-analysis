@@ -28,17 +28,11 @@ English Learners.
 
 `@pre_exercise_code`
 ```{r}
-read.table("http://assets.datacamp.com/production/repositories/4109/datasets/58d484cd9aa9884502caf2e43cd1db69ab569f89/CASchools.txt")
+CASchools <- read.table("http://assets.datacamp.com/production/repositories/4109/datasets/58d484cd9aa9884502caf2e43cd1db69ab569f89/CASchools.txt")
 ```
 
 `@sample_code`
 ```{r}
-#1 Load the AER package.
-
-
-#2 Load the dataset CASchools.
-
-
 #3 Add a variable stratio to the dataset CASchools defined as students/teachers.
 
 
@@ -48,13 +42,8 @@ read.table("http://assets.datacamp.com/production/repositories/4109/datasets/58d
 
 `@solution`
 ```{r}
-#1 Load the AER package.
-
-#2 Load the dataset CASchools.
-#data(CASchools)
-
 #3 Add a variable stratio to the dataset CASchools defined as students/teachers.
-#CASchools$stratio <- CASchools$students/CASchools$teachers
+CASchools$stratio <- CASchools$students/CASchools$teachers
 
 ```
 
