@@ -40,7 +40,7 @@ English Learners.
 
 
 #3 Add a variable stratio to the dataset CASchools defined as students/teachers.
-CASchools$stratio <- 
+
 
 #4 Add a variable score to the dataset CASchools defined as the average of math and read.
 
@@ -53,7 +53,7 @@ CASchools$stratio <-
 library(AER)
 
 #2 Load the dataset CASchools.
-data("CASchools")
+data(CASchools)
   
 #3 Add a variable stratio to the dataset CASchools defined as students/teachers.
 CASchools$stratio <- CASchools$students/CASchools$teachers
