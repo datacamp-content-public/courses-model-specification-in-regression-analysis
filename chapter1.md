@@ -28,7 +28,7 @@ English Learners.
 
 `@pre_exercise_code`
 ```{r}
-
+load("http://assets.datacamp.com/production/repositories/4109/datasets/3a99486bc00fd3c4ef22153554713675f9519cf5/CASchools")
 ```
 
 `@sample_code`
