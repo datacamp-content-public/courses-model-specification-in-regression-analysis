@@ -52,14 +52,7 @@ English Learners.
 #1 Load the AER package.
 library(AER)
 
-#2 Load the dataset CASchools.
-data(CASchools)
-  
-#3 Add a variable stratio to the dataset CASchools defined as students/teachers.
-CASchools$stratio <- CASchools$students/CASchools$teachers
-  
-#4 Add a variable score to the dataset CASchools defined as the average of math and read.
-CASchools$score <- (CASchools$math + CASchools$read)/2)
+
 ```
 
 `@sct`
