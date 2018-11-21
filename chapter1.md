@@ -59,3 +59,49 @@ summary(CASchools)
 ```{r}
 
 ```
+
+---
+
+## Simple regression
+
+```yaml
+type: TabExercise
+key: 171fc033c6
+xp: 100
+```
+
+We will now estimate the simple linear regression of score on stratio and we will assess the validity of the linearity assumption.
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: d6674928cf
+xp: 100
+```
+
+`@instructions`
+Regress score on stratio (the variables are in the dataset CASchools) and save the results in fit1.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+fit1 <- lm(score~stratio, data=CASchools)
+```
+
+`@sct`
+```{r}
+
+```
