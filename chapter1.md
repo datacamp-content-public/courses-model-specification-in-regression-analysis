@@ -163,7 +163,7 @@ A first step to assess the linearity assumption consists in plotting the depende
 plot(score~stratio, data=CASchools)
 
 #Add a line for the fitted values
-abline(fit1)
+abline(lm(score~stratio, data=CASchools))
 
 ```
 
