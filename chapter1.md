@@ -221,7 +221,7 @@ The result of the RESET test indicates that
 `@possible_answers`
 1. We can reject the null hypothesis that the model is correctly specified at the 5% significance level.
 2. We can reject the null hypothesis that the model is misspecified at the 5% significance level.
-[3. We cannot reject the null hypothesis that the model is correctly specified at the 5% significance level.]
+3. [We cannot reject the null hypothesis that the model is correctly specified at the 5% significance level.]
 4. We cannot reject the null hypothesis that the model is misspecified at the 5% significance level.
 
 `@hint`
