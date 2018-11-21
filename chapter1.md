@@ -84,7 +84,7 @@ CASchools$score <- (CASchools$math + CASchools$read)/2
 ```yaml
 type: NormalExercise
 key: d6674928cf
-xp: 50
+xp: 35
 ```
 
 `@instructions`
@@ -113,7 +113,7 @@ fit1 <- lm(score~stratio, data=CASchools)
 ```yaml
 type: MultipleChoiceExercise
 key: c4172bce65
-xp: 50
+xp: 35
 ```
 
 `@question`
@@ -127,6 +127,45 @@ Assume that all assumptions of the clasical linear regression model are satisfie
 
 `@hint`
 
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 11e9fc60e0
+xp: 30
+```
+
+`@instructions`
+A first step to assess the linearity assumption consists in plotting the dependent and independent variables and adding the regression line.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+#Generate a scatterplot of the dependent variable (y-axis) and regressor (x-axis)
+
+
+#Add a line for the fitted values
+
+
+```
+
+`@solution`
+```{r}
+#Generate a scatterplot of the dependent variable (y-axis) and regressor (x-axis)
+plot(score~stratio, data=CASchools)
+
+#Add a line for the fitted values
+abline(fit1)
+
+```
 
 `@sct`
 ```{r}
