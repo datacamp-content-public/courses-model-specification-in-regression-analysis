@@ -150,16 +150,17 @@ Use the function plot for the scatterplot. Use abline and lm for the regression 
 
 `@sample_code`
 ```{r}
+fit1 <- lm(score~stratio, data=CASchools)
 #Generate a scatterplot of the dependent variable (y-axis) and regressor (x-axis)
 
 
 #Add a line for the fitted values
 
-
 ```
 
 `@solution`
 ```{r}
+fit1 <- lm(score~stratio, data=CASchools)
 #Generate a scatterplot of the dependent variable (y-axis) and regressor (x-axis)
 plot(score~stratio, data=CASchools)
 
