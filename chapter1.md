@@ -77,7 +77,7 @@ We will now estimate the simple linear regression of score on stratio and we wil
 CASchools <- read.table("http://assets.datacamp.com/production/repositories/4109/datasets/58d484cd9aa9884502caf2e43cd1db69ab569f89/CASchools.txt")
 CASchools$stratio <- CASchools$students/CASchools$teachers
 CASchools$score <- (CASchools$math + CASchools$read)/2
-library(lmtest)
+library(car)
 ```
 
 ***
