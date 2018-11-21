@@ -182,18 +182,22 @@ xp: 25
 ```
 
 `@instructions`
-We now complete the graphical assessement with a formal test. A simple
+We now complete the graphical assessement with a formal test. Perform the RESET specification test for the regression fit1.
 
 `@hint`
 
 
 `@sample_code`
 ```{r}
+fit1 <- lm(score~stratio, data=CASchools)
+#reset test:
 
 ```
 
 `@solution`
 ```{r}
+fit1 <- lm(score~stratio, data=CASchools)
+#reset test:
 resettest(lm(score~stratio, data=CASchools))
 ```
 
