@@ -85,7 +85,7 @@ source("http://assets.datacamp.com/production/repositories/4109/datasets/2452ec4
 ```yaml
 type: NormalExercise
 key: d6674928cf
-xp: 25
+xp: 20
 ```
 
 `@instructions`
@@ -114,7 +114,7 @@ fit1 <- lm(score~stratio, data=CASchools)
 ```yaml
 type: MultipleChoiceExercise
 key: c4172bce65
-xp: 25
+xp: 20
 ```
 
 `@question`
@@ -139,7 +139,7 @@ Assume that all assumptions of the clasical linear regression model are satisfie
 ```yaml
 type: NormalExercise
 key: 11e9fc60e0
-xp: 25
+xp: 20
 ```
 
 `@instructions`
@@ -178,11 +178,11 @@ abline(lm(score~stratio, data=CASchools))
 ```yaml
 type: NormalExercise
 key: fdab4b7a92
-xp: 25
+xp: 20
 ```
 
 `@instructions`
-We now complete the graphical assessement with a formal test. Perform the RESET specification test for the regression fit1.
+We now complete the graphical assessement with a formal test. Perform the RESET specification test for the regression fit1 and save the results in test1
 
 `@hint`
 
@@ -191,15 +191,40 @@ We now complete the graphical assessement with a formal test. Perform the RESET 
 ```{r}
 fit1 <- lm(score~stratio, data=CASchools)
 #reset test:
-
+test1 <- 
 ```
 
 `@solution`
 ```{r}
 fit1 <- lm(score~stratio, data=CASchools)
 #reset test:
-resettest(lm(score~stratio, data=CASchools))
+test1 <- resettest(lm(score~stratio, data=CASchools))
 ```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: 61fc8a9ccd
+xp: 20
+```
+
+`@question`
+The result of the RESET test indicates that
+
+`@possible_answers`
+1. We can reject the null hypothesis that the model is correctly specified at the 5% significance level.
+2. We can reject the null hypothesis that the model is misspecified at the 5% significance level.
+[3. We cannot reject the null hypothesis that the model is correctly specified at the 5% significance level.]
+4. We cannot reject the null hypothesis that the model is misspecified at the 5% significance level.
+
+`@hint`
+
 
 `@sct`
 ```{r}
