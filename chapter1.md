@@ -120,10 +120,10 @@ xp: 50
 Assume that all assumptions of the clasical linear regression model are satisfied. What is the estimated effect of increasing the number of students in the class from 20 to 22 on the expected score?
 
 `@possible_answers`
-It increases by 2.2798. 
-It decreases by 2.2798.
-[It decreases by -4.5596.]
-We are not able to respond.
+1. It increases by 2.2798. 
+2. It decreases by 2.2798.
+3. [It decreases by -4.5596.]
+4. We are not able to respond.
 
 `@hint`
 
