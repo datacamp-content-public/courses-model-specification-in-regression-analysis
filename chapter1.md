@@ -84,7 +84,7 @@ CASchools$score <- (CASchools$math + CASchools$read)/2
 ```yaml
 type: NormalExercise
 key: d6674928cf
-xp: 35
+xp: 25
 ```
 
 `@instructions`
@@ -113,7 +113,7 @@ fit1 <- lm(score~stratio, data=CASchools)
 ```yaml
 type: MultipleChoiceExercise
 key: c4172bce65
-xp: 35
+xp: 25
 ```
 
 `@question`
@@ -138,7 +138,7 @@ Assume that all assumptions of the clasical linear regression model are satisfie
 ```yaml
 type: NormalExercise
 key: 11e9fc60e0
-xp: 30
+xp: 25
 ```
 
 `@instructions`
@@ -165,6 +165,36 @@ plot(score~stratio, data=CASchools)
 #Add a line for the fitted values
 abline(lm(score~stratio, data=CASchools))
 
+```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: fdab4b7a92
+xp: 25
+```
+
+`@instructions`
+We now complete the graphical assessement with a formal test. Complete a RESET test for the validity of the linearity assumption.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+library(lmtest)
+resettest(lm(score~stratio, data=CASchools))
 ```
 
 `@sct`
