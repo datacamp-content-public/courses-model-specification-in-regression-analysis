@@ -145,7 +145,7 @@ xp: 30
 A first step to assess the linearity assumption consists in plotting the dependent and independent variables and adding the regression line.
 
 `@hint`
-
+Use the function plot for the scatterplot. Use abline and lm for the regression line.
 
 `@sample_code`
 ```{r}
