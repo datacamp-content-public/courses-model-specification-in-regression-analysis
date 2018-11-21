@@ -82,7 +82,7 @@ We will now estimate the simple linear regression of score on stratio and we wil
 ```yaml
 type: NormalExercise
 key: d6674928cf
-xp: 100
+xp: 50
 ```
 
 `@instructions`
@@ -100,6 +100,31 @@ Regress score on stratio (the variables are in the dataset CASchools) and save t
 ```{r}
 fit1 <- lm(score~stratio, data=CASchools)
 ```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: c4172bce65
+xp: 50
+```
+
+`@question`
+Assume that all assumptions of the clasical linear regression model are satisfied. What is the estimated effect of increasing the number of students in the class from 20 to 22 on the expected score?
+
+`@possible_answers`
+It increases by 2.2798. 
+It decreases by 2.2798.
+[It decreases by -4.5596.]
+We are not able to respond.
+
+`@hint`
+
 
 `@sct`
 ```{r}
