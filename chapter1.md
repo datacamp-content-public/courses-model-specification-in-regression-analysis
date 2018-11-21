@@ -74,7 +74,7 @@ We will now estimate the simple linear regression of score on stratio and we wil
 
 `@pre_exercise_code`
 ```{r}
-
+CASchools <- read.table("http://assets.datacamp.com/production/repositories/4109/datasets/58d484cd9aa9884502caf2e43cd1db69ab569f89/CASchools.txt")
 ```
 
 ***
