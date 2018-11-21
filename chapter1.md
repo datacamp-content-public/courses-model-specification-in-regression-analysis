@@ -3,7 +3,7 @@ title: 'Chapter 1'
 description: 'Chapter description goes here.'
 ---
 
-## Example coding exercise
+## Data preparation
 
 ```yaml
 type: NormalExercise
