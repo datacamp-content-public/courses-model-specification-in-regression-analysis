@@ -256,7 +256,7 @@ CASchools$score <- (CASchools$math + CASchools$read)/2
 ```yaml
 type: NormalExercise
 key: 8dbc913032
-xp: 100
+xp: 20
 ```
 
 `@instructions`
@@ -279,6 +279,171 @@ plot(score~stratio, data=CASchools)
 abline(lm(score~stratio, data=CASchools))
 #add a line in red that show the fitted values of the local linear regression
 lines(loess.smooth(CASchools$stratio, CASchools$score), col="red")
+```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: a05fe70964
+xp: 20
+```
+
+`@instructions`
+Estimate the local linear regression with the function loess().
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+#Estimate the local linear regression of score on stratio
+loe1 <- 
+```
+
+`@solution`
+```{r}
+#Estimate the local linear regression of score on stratio
+loe1 <- loess(score~stratio, data=CASchools)
+```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: cee55711de
+xp: 20
+```
+
+`@instructions`
+Calculate the predicted values.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+#Estimate the local linear regression of score on stratio
+loe1 <- loess(score~stratio, data=CASchools)
+#Calculate the predicted values with their standard errors
+ploe1 <- 
+```
+
+`@solution`
+```{r}
+#Estimate the local linear regression of score on stratio
+loe1 <- loess(score~stratio, data=CASchools)
+#Calculate the predicted values with their standard errors
+ploe1 <- predict(loe1,se=TRUE)
+```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 434d5e30c3
+xp: 20
+```
+
+`@instructions`
+Calculate the confidence intervals.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+#Estimate the local linear regression of score on stratio
+loe1 <- loess(score~stratio, data=CASchools)
+#Calculate the predicted values with their standard errors
+ploe1 <- predict(loe1,se=TRUE)
+#Calculate the lower end of the 95% confidence interval
+low_ci <- ploe1$fit-qnorm(0.975)*
+high_ci <- 
+```
+
+`@solution`
+```{r}
+#Estimate the local linear regression of score on stratio
+loe1 <- loess(score~stratio, data=CASchools)
+#Calculate the predicted values with their standard errors
+ploe1 <- predict(loe1,se=TRUE)
+#Calculate the lower end of the 95% confidence interval
+low_ci <- ploe1$fit-qnorm(0.975)*ploe1$se.fit
+high_ci <- ploe1$fit+qnorm(0.975)*ploe1$se.fit
+```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 4614afb224
+xp: 20
+```
+
+`@instructions`
+Plot the fitted values with the confidence intervals.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+#Estimate the local linear regression of score on stratio
+loe1 <- loess(score~stratio, data=CASchools)
+#Calculate the predicted values with their standard errors
+ploe1 <- predict(loe1,se=TRUE)
+#Calculate the lower end of the 95% confidence interval
+low_ci <- ploe1$fit-qnorm(0.975)*ploe1$se.fit
+high_ci <- ploe1$fit+qnorm(0.975)*ploe1$se.fit
+#calculate the ranks of the x variable
+order1 <- order(loe1$x)
+#scatterplot 
+plot(score~stratio, data=CASchools)
+#add a red line for the fitted values of the local linear regression
+
+#blue lines for the ends of the confidence interval
+
+```
+
+`@solution`
+```{r}
+#Estimate the local linear regression of score on stratio
+loe1 <- loess(score~stratio, data=CASchools)
+#Calculate the predicted values with their standard errors
+ploe1 <- predict(loe1,se=TRUE)
+#Calculate the lower end of the 95% confidence interval
+low_ci <- ploe1$fit-qnorm(0.975)*ploe1$se.fit
+high_ci <- ploe1$fit+qnorm(0.975)*ploe1$se.fit
+#calculate the ranks of the x variable
+order1 <- order(loe1$x)
+#scatterplot 
+plot(score~stratio, data=CASchools)
+#red line for the fitted values of the local linear regression
+lines(ploe1$fit[order1]~loe1$x[order1],col="red")
+#blue lines for the ends of the confidence interval
+lines(low_ci[order1]~loe1$x[order1],col="blue")
+lines(high_ci[order1]~loe1$x[order1],col="blue")
 ```
 
 `@sct`
