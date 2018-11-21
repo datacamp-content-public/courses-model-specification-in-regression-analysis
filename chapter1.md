@@ -246,7 +246,9 @@ xp: 100
 
 `@pre_exercise_code`
 ```{r}
-
+CASchools <- read.table("http://assets.datacamp.com/production/repositories/4109/datasets/58d484cd9aa9884502caf2e43cd1db69ab569f89/CASchools.txt")
+CASchools$stratio <- CASchools$students/CASchools$teachers
+CASchools$score <- (CASchools$math + CASchools$read)/2
 ```
 
 ***
@@ -276,7 +278,7 @@ abline(lm(score~stratio, data=CASchools))
 plot(score~stratio, data=CASchools)
 abline(lm(score~stratio, data=CASchools))
 #add a line in red that show the fitted values of the local linear regression
-lines(loess.smooth(score~stratio, data=CASchools), col="red")
+lines(loess.smooth(CASchools$stratio, CASchools$score), col="red")
 ```
 
 `@sct`
