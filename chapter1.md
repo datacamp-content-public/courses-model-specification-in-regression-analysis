@@ -231,3 +231,55 @@ The result of the RESET test indicates that
 ```{r}
 
 ```
+
+---
+
+## Nonparametric regression
+
+```yaml
+type: TabExercise
+key: 7af7febd8a
+xp: 100
+```
+
+
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 8dbc913032
+xp: 100
+```
+
+`@instructions`
+We will now estimate the same relationship with a local linear regression.
+
+`@hint`
+Try with the functions lines() and loess.smooth().
+
+`@sample_code`
+```{r}
+plot(score~stratio, data=CASchools)
+abline(lm(score~stratio, data=CASchools))
+#add a line in red that show the fitted values of the local linear regression
+
+```
+
+`@solution`
+```{r}
+plot(score~stratio, data=CASchools)
+abline(lm(score~stratio, data=CASchools))
+#add a line in red that show the fitted values of the local linear regression
+lines(loess.smooth(score~stratio, data=CASchools), col="red")
+```
+
+`@sct`
+```{r}
+
+```
