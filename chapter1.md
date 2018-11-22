@@ -614,3 +614,27 @@ The model is clearly misspecified. What do you do?
 ```{r}
 
 ```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: 6ccd95e3f1
+```
+
+`@question`
+Use the console to plot the residuals as a function of stratio and then as a function of income. Which variable is more likely to cause the rejection of the linearity assumption?
+
+`@possible_answers`
+1. stratio
+2. [income]
+3. both
+4. I see nothing nonlinear in the bivariate relationship. The problem must come from the omitted interaction.
+
+`@hint`
+
+
+`@sct`
+```{r}
+
+```
