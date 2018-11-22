@@ -774,3 +774,58 @@ plot(fit4, which=1)
 ```{r}
 
 ```
+
+---
+
+## Multiple regression: normality of the error terms
+
+```yaml
+type: TabExercise
+key: 4ebe7f0f52
+xp: 100
+```
+
+In this exercise we want to assess the validity of the normality assumption.
+
+`@pre_exercise_code`
+```{r}
+CASchools <- read.table("http://assets.datacamp.com/production/repositories/4109/datasets/58d484cd9aa9884502caf2e43cd1db69ab569f89/CASchools.txt")
+CASchools$stratio <- CASchools$students/CASchools$teachers
+CASchools$score <- (CASchools$math + CASchools$read)/2
+source("http://assets.datacamp.com/production/repositories/4109/datasets/2452ec47ee5ae7d60fcadf8ab51780a5a0244e2c/resettest.R")
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 45ed78633a
+xp: 100
+```
+
+`@instructions`
+Use plot with the correct argument which to assess graphically the validity of the normality assumption.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+#regression
+fit2 <- lm(score ~ stratio + income, data = CASchools)
+#q-q-plot
+
+```
+
+`@solution`
+```{r}
+#regression
+fit2 <- lm(score ~ stratio + income, data = CASchools)
+#q-q-plot of the residuals
+plot(fit2, which=2)
+```
+
+`@sct`
+```{r}
+
+```
