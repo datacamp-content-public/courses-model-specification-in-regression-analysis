@@ -453,7 +453,7 @@ lines(high_ci[order1]~loe1$x[order1],col="blue")
 
 ---
 
-## Multiple regression: linearity assumption
+## Multiple regression: linearity
 
 ```yaml
 type: TabExercise
@@ -461,7 +461,7 @@ key: a3732e108e
 xp: 100
 ```
 
-We now analyze the multiple regression model.
+We estimate now a multiple linear regression and assess the linearity assumption.
 
 `@pre_exercise_code`
 ```{r}
@@ -476,11 +476,11 @@ source("http://assets.datacamp.com/production/repositories/4109/datasets/2452ec4
 ```yaml
 type: NormalExercise
 key: aee3f8d597
-xp: 100
+xp: 20
 ```
 
 `@instructions`
-Regress score on a constant, stratio, expenditure, english, and lunch. These variables are in the dataset CASchools. Save the regression result in fit2.
+Regress score on a constant, stratio, and income. These variables are in the dataset CASchools. Save the regression result in fit2.
 
 `@hint`
 
@@ -492,8 +492,123 @@ Regress score on a constant, stratio, expenditure, english, and lunch. These var
 
 `@solution`
 ```{r}
-fit2 <- lm(score ~ stratio + expenditure + english + lunch, data = CASchools)
+fit2 <- lm(score ~ stratio + income, data = CASchools)
 ```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: d95e25f8b9
+xp: 20
+```
+
+`@instructions`
+We want to assess the validity of the linearity assumption. Use the plot function with the correct avalue for the argument `which' in order
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+fit2 <- lm(score ~ stratio + income, data = CASchools)
+#model specification plot
+plot(fit2, which= )
+```
+
+`@solution`
+```{r}
+fit2 <- lm(score ~ stratio + income, data = CASchools)
+#model specification plot
+plot(fit2, which= 1)
+```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: c83fe88108
+xp: 20
+```
+
+`@question`
+In this figure, do you find any evidence for the misspecification of the regression fit2?
+
+`@possible_answers`
+1. Everything looks fine. The mean of the residuals is close to zero.
+2. The red line is not flat but I cannot conclude that the model is misspecified.
+3. [The model is obviously misspecified. The red line is below zero in the tails and above zero in the middle.]
+
+`@hint`
+
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: c27d074a22
+xp: 20
+```
+
+`@instructions`
+Perform a formal test to test the null hypothesis that fit2 is misspecified.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+fit2 <- lm(score ~ stratio + income, data = CASchools)
+#model specification test
+
+```
+
+`@solution`
+```{r}
+fit2 <- lm(score ~ stratio + income, data = CASchools)
+#model specification test
+ressettest(fit2)
+```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: e486abfff6
+xp: 20
+```
+
+`@question`
+The model is clearly misspecified. What do you do?
+
+`@possible_answers`
+1. [I estimate a more flexible model.]
+2. I collect more data.
+3. I must use an instrumental variable.
+4. I am sick of econometrics.
+
+`@hint`
+
 
 `@sct`
 ```{r}
