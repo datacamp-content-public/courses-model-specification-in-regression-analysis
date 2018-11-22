@@ -974,7 +974,7 @@ source("http://assets.datacamp.com/production/repositories/4109/datasets/46b1973
 ```yaml
 type: NormalExercise
 key: 142182d8b7
-xp: 100
+xp: 25
 ```
 
 `@instructions`
@@ -991,6 +991,105 @@ Regress score on stratio and english and save the result in fit5. All the variab
 `@solution`
 ```{r}
 fit5 <- lm(score~stratio+english,data=CASchools)
+```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: ed0123c329
+xp: 25
+```
+
+`@instructions`
+Use the function plot to assess visually the validity of the homoscedasticity assumption.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+#Regression
+fit5 <- lm(score~stratio+english,data=CASchools)
+
+#Assessment of the homoscedasticity assumption
+
+```
+
+`@solution`
+```{r}
+#Regression
+fit5 <- lm(score~stratio+english,data=CASchools)
+
+#Assessment of the homoscedasticity assumption
+plot(fit5, which=3)
+```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: 6f6ed10e94
+xp: 25
+```
+
+`@question`
+How do you interpret this figure?
+
+`@possible_answers`
+1. The observation number 6 is problematic.
+2. The red line should be close to 0 everywhere. Here it is not the case such that the homoscedasticity assumption is likely to be satisfied.
+3. [The red line should be flat. Here it is not the case such that the homoscedasticity assumption is likely to be satisfied.]
+4. It looks absolutely fine.
+
+`@hint`
+
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 5e0c935741
+xp: 25
+```
+
+`@instructions`
+Perform the Breusch-Pagan test against heteroskedasticity.
+
+`@hint`
+Use the function bptest.
+
+`@sample_code`
+```{r}
+#Regression
+fit5 <- lm(score~stratio+english,data=CASchools)
+
+#Breusch-Pagan test
+
+```
+
+`@solution`
+```{r}
+#Regression
+fit5 <- lm(score~stratio+english,data=CASchools)
+
+#Breusch-Pagan test
+bptest(fit5)
 ```
 
 `@sct`
