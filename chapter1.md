@@ -801,7 +801,7 @@ source("http://assets.datacamp.com/production/repositories/4109/datasets/e712d96
 ```yaml
 type: NormalExercise
 key: 45ed78633a
-xp: 100
+xp: 35
 ```
 
 `@instructions`
@@ -824,6 +824,73 @@ fit2 <- lm(score ~ stratio + income, data = CASchools)
 fit2 <- lm(score ~ stratio + income, data = CASchools)
 #q-q-plot of the residuals
 plot(fit2, which=2)
+```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: 72b2fa76f1
+xp: 35
+```
+
+`@question`
+How do you interprete this plot?
+
+`@possible_answers`
+1. The points should all be close to zero when the error terms are normally distributed. Therefore, I reject the normality assumption.
+2. The points should all be perfectly on the diagonal when the error terms are normally distributed. Therefore, I reject the normality assumption.
+3. [The points should be close to the diagonal when the error terms are normally distributed. Here they slightly deviate from the diagonal at the upper tail.]
+
+`@hint`
+
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 23c43e89e7
+xp: 30
+```
+
+`@instructions`
+To be sure, we now use a formal test. Perform the Cramer-von Mises test for normality of the standardized residuals.
+
+`@hint`
+The functions rstandard and cvm.test are useful!
+
+`@sample_code`
+```{r}
+#regression
+fit2 <- lm(score ~ stratio + income, data = CASchools)
+
+#standardized residuals
+standard.resid <- 
+
+#Cramer-von-Mises test for the standardized residuals (add the correct function at the beginning of the line!)
+(standard.resid)
+```
+
+`@solution`
+```{r}
+#regression
+fit2 <- lm(score ~ stratio + income, data = CASchools)
+
+#standardized residuals
+standard.resid <- rstandard(fit2)
+
+#Cramer-von-Mises test for the standardized residuals (add the correct function!)
+cvm.test(standard.resid)
 ```
 
 `@sct`
