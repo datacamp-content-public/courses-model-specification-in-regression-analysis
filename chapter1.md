@@ -767,7 +767,7 @@ fit4 <- lm(score ~ stratio + poly(income, 4, raw=TRUE), data = CASchools)
 fit4 <- lm(score ~ stratio + poly(income, 4, raw=TRUE), data = CASchools)
 
 #Use plot to assess the validity of the model specification
-plot(fit4,which=1)
+plot(fit4, which=1)
 ```
 
 `@sct`
