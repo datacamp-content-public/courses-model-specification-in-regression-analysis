@@ -1,5 +1,5 @@
 ---
-title: 'Chapter 1'
+title: 'Testing the assumptions of the linear regression model'
 description: 'Chapter description goes here.'
 ---
 
