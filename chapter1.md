@@ -131,7 +131,13 @@ Assume that all assumptions of the clasical linear regression model are satisfie
 
 `@sct`
 ```{r}
-
+{
+msg1 <- "Not good, try again!"
+msg3 <- "Nice one!"
+msg2 <- "Not quite, give it another shot."
+msg4 <- "Not quite, give it another shot."
+ex() %>% check_mc(3, feedback_msgs = c(msg1, msg2, msg3, msg4))
+}
 ```
 
 ***
