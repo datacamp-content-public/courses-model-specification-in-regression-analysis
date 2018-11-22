@@ -965,8 +965,8 @@ In this exercise we will test for heteroscedasticity and estimate robust standar
 CASchools <- read.table("http://assets.datacamp.com/production/repositories/4109/datasets/58d484cd9aa9884502caf2e43cd1db69ab569f89/CASchools.txt")
 CASchools$stratio <- CASchools$students/CASchools$teachers
 CASchools$score <- (CASchools$math + CASchools$read)/2
-source("http://assets.datacamp.com/production/repositories/4109/datasets/49937921da7139cefb0ef59c0bbd8757bd5355b1/bptest.R")
 source("http://assets.datacamp.com/production/repositories/4109/datasets/46b197379ed9fce23068c367d4f8737540d38825/sandwich.R")
+source("http://assets.datacamp.com/production/repositories/4109/datasets/d2d7a5184c3d15185e9d0907e2d928f67938b38e/lmtest.R")
 ```
 
 ***
@@ -974,7 +974,7 @@ source("http://assets.datacamp.com/production/repositories/4109/datasets/46b1973
 ```yaml
 type: NormalExercise
 key: 142182d8b7
-xp: 25
+xp: 15
 ```
 
 `@instructions`
@@ -1003,7 +1003,7 @@ fit5 <- lm(score~stratio+english,data=CASchools)
 ```yaml
 type: NormalExercise
 key: ed0123c329
-xp: 25
+xp: 15
 ```
 
 `@instructions`
@@ -1040,7 +1040,7 @@ plot(fit5, which=3)
 ```yaml
 type: MultipleChoiceExercise
 key: 6f6ed10e94
-xp: 25
+xp: 15
 ```
 
 `@question`
@@ -1065,7 +1065,7 @@ How do you interpret this figure?
 ```yaml
 type: NormalExercise
 key: 5e0c935741
-xp: 25
+xp: 15
 ```
 
 `@instructions`
@@ -1090,6 +1090,110 @@ fit5 <- lm(score~stratio+english,data=CASchools)
 
 #Breusch-Pagan test
 bptest(fit5)
+```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: 9cfd60eae9
+xp: 15
+```
+
+`@question`
+How do you interpret the output?
+
+`@possible_answers`
+1. The p-value is very low. I can reject heteroscedasticity.
+2. [The p-value is very low. I can reject homoscedasticity.]
+3. The p-value is very low. I cannot reject heteroscedasticity.
+4. The p-value is very low. I cannot reject homoscedasticity.
+
+`@hint`
+
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: c98ffe41a3
+xp: 15
+```
+
+`@question`
+We must reject the homoscedasticity assumption. What is the consequence?
+
+`@possible_answers`
+1. The coefficients are biased in finite samples but are correct asymptotically.
+2. The standard errors are biased in finite samples but are correct asymptotically.
+3. [The standard errors are biased in finite samples and asymptotically.]
+4. The causal interpretation of the coefficients is lost.
+
+`@hint`
+
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: 2b17ccbdb4
+xp: 15
+```
+
+`@question`
+We must reject the homoscedasticity assumption. What should you do?
+
+`@possible_answers`
+1. [We should estimate differently the standard errors.]
+2. We should estimate a more flexible model.
+3. We should collect more data.
+4. We should stop doing econometrics.
+
+`@hint`
+
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: fefd6628ff
+xp: -5
+```
+
+`@instructions`
+
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+
 ```
 
 `@sct`
