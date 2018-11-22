@@ -801,7 +801,7 @@ source("http://assets.datacamp.com/production/repositories/4109/datasets/e712d96
 ```yaml
 type: NormalExercise
 key: 45ed78633a
-xp: 35
+xp: 25
 ```
 
 `@instructions`
@@ -836,7 +836,7 @@ plot(fit2, which=2)
 ```yaml
 type: MultipleChoiceExercise
 key: 72b2fa76f1
-xp: 35
+xp: 25
 ```
 
 `@question`
@@ -860,7 +860,7 @@ How do you interprete this plot?
 ```yaml
 type: NormalExercise
 key: 23c43e89e7
-xp: 30
+xp: 25
 ```
 
 `@instructions`
@@ -892,6 +892,31 @@ standard.resid <- rstandard(fit2)
 #Cramer-von-Mises test for the standardized residuals (add the correct function!)
 cvm.test(standard.resid)
 ```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: 09923fac3f
+xp: 25
+```
+
+`@question`
+How do you interpret the results of the test? (we use a significance level of 10%)
+
+`@possible_answers`
+1. [The p-value is above 10%. The null hypothesis is that the error terms are normally distributed. Thus, I cannot reject the validity of the normality assumption.]
+2. The p-value is above 10%. The null hypothesis is that the error terms are not normally distributed. Thus, I cannot reject that the error terms are not normally distributed.
+3. W is below 10%. The null hypothesis is that the error terms are normally distributed. Thus, I can reject the validity of the normality assumption.
+4. W is below 10%. The null hypothesis is that the error terms are not normally distributed. Thus, I can reject that the error terms are not normally distributed.
+
+`@hint`
+
 
 `@sct`
 ```{r}
