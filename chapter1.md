@@ -947,3 +947,53 @@ Here we could not reject the validity of the normality assumption. What would be
 ```{r}
 
 ```
+
+---
+
+## Multiple regression: heteroscedasticity
+
+```yaml
+type: TabExercise
+key: 373481ad1e
+xp: 100
+```
+
+In this exercise we will test for heteroscedasticity and estimate robust standard errors
+
+`@pre_exercise_code`
+```{r}
+CASchools <- read.table("http://assets.datacamp.com/production/repositories/4109/datasets/58d484cd9aa9884502caf2e43cd1db69ab569f89/CASchools.txt")
+CASchools$stratio <- CASchools$students/CASchools$teachers
+CASchools$score <- (CASchools$math + CASchools$read)/2
+source("http://assets.datacamp.com/production/repositories/4109/datasets/49937921da7139cefb0ef59c0bbd8757bd5355b1/bptest.R")
+source("http://assets.datacamp.com/production/repositories/4109/datasets/063224488e2f888336ebd40041532ecb07da5034/sandwich.R")
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 142182d8b7
+xp: 100
+```
+
+`@instructions`
+Regress score on stratio and english and save the result in fit5. All the variables are in the dataset CASchools.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+fit5 <- lm(score~stratio+english,data=CASchools)
+```
+
+`@sct`
+```{r}
+
+```
