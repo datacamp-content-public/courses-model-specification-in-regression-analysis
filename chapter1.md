@@ -793,7 +793,7 @@ CASchools <- read.table("http://assets.datacamp.com/production/repositories/4109
 CASchools$stratio <- CASchools$students/CASchools$teachers
 CASchools$score <- (CASchools$math + CASchools$read)/2
 source("http://assets.datacamp.com/production/repositories/4109/datasets/2452ec47ee5ae7d60fcadf8ab51780a5a0244e2c/resettest.R")
-source("http://assets.datacamp.com/production/repositories/4109/datasets/9b6bef27bdb28812cb81f301a9147727e1a02fef/nortest.R")
+source("http://assets.datacamp.com/production/repositories/4109/datasets/e712d965a40e19322dc00dc13cd94e541266890c/nortest.R")
 ```
 
 ***
