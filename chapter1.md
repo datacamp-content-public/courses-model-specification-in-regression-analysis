@@ -123,7 +123,7 @@ Assume that all assumptions of the clasical linear regression model are satisfie
 `@possible_answers`
 1. It increases by 2.2798. 
 2. It decreases by 2.2798.
-3. [It decreases by -4.5596.]
+[3. It decreases by -4.5596.]
 4. We are not able to respond.
 
 `@hint`
