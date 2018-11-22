@@ -1181,19 +1181,33 @@ xp: -5
 ```
 
 `@instructions`
-
+We now estimate standard errors that are robust against hetoroscedasticity.
 
 `@hint`
-
+The functions vcovHC and coeftest with the option vcov. are useful.
 
 `@sample_code`
 ```{r}
+#Regression
+fit5 <- lm(score~stratio+english,data=CASchools)
+
+#Estimate the variance-covariance matrix of the coefficients using an estimator of the variance that is robust against heteroscedasticity:
+robust.var <- 
+
+#Show the regression table with the robust standard errors
 
 ```
 
 `@solution`
 ```{r}
+#Regression
+fit5 <- lm(score~stratio+english,data=CASchools)
 
+#Estimate the variance-covariance matrix of the coefficients using an estimator of the variance that is robust against heteroscedasticity:
+robust.var <- vcovHC(fit5, type="HC")
+
+#Show the regression table with the robust standard errors
+coeftest(fit5, vcov.=robust.var)
 ```
 
 `@sct`
