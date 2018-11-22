@@ -476,7 +476,7 @@ source("http://assets.datacamp.com/production/repositories/4109/datasets/2452ec4
 ```yaml
 type: NormalExercise
 key: aee3f8d597
-xp: 20
+xp: 10
 ```
 
 `@instructions`
@@ -505,7 +505,7 @@ fit2 <- lm(score ~ stratio + income, data = CASchools)
 ```yaml
 type: NormalExercise
 key: d95e25f8b9
-xp: 20
+xp: 10
 ```
 
 `@instructions`
@@ -538,7 +538,7 @@ plot(fit2, which= 1)
 ```yaml
 type: MultipleChoiceExercise
 key: c83fe88108
-xp: 20
+xp: 10
 ```
 
 `@question`
@@ -562,7 +562,7 @@ In this figure, do you find any evidence for the misspecification of the regress
 ```yaml
 type: NormalExercise
 key: c27d074a22
-xp: 20
+xp: 10
 ```
 
 `@instructions`
@@ -595,7 +595,7 @@ resettest(fit2)
 ```yaml
 type: MultipleChoiceExercise
 key: e486abfff6
-xp: 20
+xp: 10
 ```
 
 `@question`
@@ -620,6 +620,7 @@ The model is clearly misspecified. What do you do?
 ```yaml
 type: MultipleChoiceExercise
 key: 6ccd95e3f1
+xp: 10
 ```
 
 `@question`
@@ -633,6 +634,141 @@ Use the console to plot the residuals as a function of stratio and then as a fun
 
 `@hint`
 
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 03e21166b7
+xp: 10
+```
+
+`@instructions`
+We estimate now a more flexible model in income. Use the function poly to include a second order polynom in income as a regressor. The argument raw must be set to TRUE.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+#Add the correct arguments to the function poly:
+fit3 <- lm(score ~ stratio + poly(income), data = CASchools)
+
+#Test the validity of the linearity assumption for this model:
+
+```
+
+`@solution`
+```{r}
+#Add the correct arguments to the function poly:
+fit3 <- lm(score ~ stratio + poly(income, 2, raw=TRUE), data = CASchools)
+
+#Test the validity of the linearity assumption for this model:
+resettest(fit3)
+```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: 834717f45b
+xp: 10
+```
+
+`@question`
+Is this model better? Are you satisfied?
+
+`@possible_answers`
+1. This model is great!
+2. [This model is slightly better but I am still rejecting the null hypothesis that the model is correct at the 5% level.]
+3. Include income to the power 2 did not improve the model at all.
+
+`@hint`
+
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: dfebdbcaa7
+xp: 10
+```
+
+`@instructions`
+We want to be really flexible in income and include powers of income up to the 4th term.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+#Add the correct arguments to the function poly:
+fit4 <- lm(score ~ stratio + poly(income), data = CASchools)
+
+#Test the validity of the linearity assumption for this model:
+
+```
+
+`@solution`
+```{r}
+#Add the correct arguments to the function poly:
+fit4 <- lm(score ~ stratio + poly(income, 4, raw=TRUE), data = CASchools)
+
+#Test the validity of the linearity assumption for this model:
+resettest(fit4)
+```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: f0f38264b3
+xp: 10
+```
+
+`@instructions`
+The model looks fine. We do a final graphical assessment of this model.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+#estimation
+fit4 <- lm(score ~ stratio + poly(income, 4, raw=TRUE), data = CASchools)
+
+#Use plot to assess the validity of the model specification
+
+```
+
+`@solution`
+```{r}
+#estimation
+fit4 <- lm(score ~ stratio + poly(income, 4, raw=TRUE), data = CASchools)
+
+#Use plot to assess the validity of the model specification
+plot(fit4,which=1)
+```
 
 `@sct`
 ```{r}
