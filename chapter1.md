@@ -1098,9 +1098,9 @@ xp: 15
 How do you interpret this figure?
 
 `@possible_answers`
-1. The observation number 6 is problematic.
-2. The red line should be close to 0 everywhere. Here it is not the case such that the homoscedasticity assumption is likely to be satisfied.
-3. [The red line should be flat. Here it is not the case such that the homoscedasticity assumption is likely to be satisfied.]
+1. Observation number 6 is problematic.
+2. The red line should be close to 0 everywhere. Here it is not the case such that the homoscedasticity assumption is likely to be violated.
+3. [The red line should be flat. Here it is not the case such that the homoscedasticity assumption is likely to be violated.]
 4. It looks absolutely fine.
 
 `@hint`
