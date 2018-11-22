@@ -582,7 +582,7 @@ fit2 <- lm(score ~ stratio + income, data = CASchools)
 ```{r}
 fit2 <- lm(score ~ stratio + income, data = CASchools)
 #model specification test
-ressettest(fit2)
+resettest(fit2)
 ```
 
 `@sct`
