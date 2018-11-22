@@ -133,8 +133,8 @@ Assume that all assumptions of the clasical linear regression model are satisfie
 ```{r}
 {
 msg1 <- "Not good, try again!"
-msg3 <- "Nice one!"
 msg2 <- "Not quite, give it another shot."
+msg3 <- "Nice one!"
 msg4 <- "Not quite, give it another shot."
 ex() %>% check_mc(3, feedback_msgs = c(msg1, msg2, msg3, msg4))
 }
@@ -235,7 +235,13 @@ The result of the RESET test indicates that
 
 `@sct`
 ```{r}
-
+{
+msg1 <- "Not good, try again!"
+msg2 <- "Not quite, give it another shot."
+msg3 <- "Nice one!"
+msg4 <- "Not quite, give it another shot."
+ex() %>% check_mc(3, feedback_msgs = c(msg1, msg2, msg3, msg4))
+}
 ```
 
 ---
@@ -560,7 +566,12 @@ In this figure, do you find any evidence for the misspecification of the regress
 
 `@sct`
 ```{r}
-
+{
+msg1 <- "Not good, try again!"
+msg2 <- "Not quite, give it another shot."
+msg3 <- "Nice one!"
+ex() %>% check_mc(3, feedback_msgs = c(msg1, msg2, msg3))
+}
 ```
 
 ***
@@ -618,7 +629,13 @@ The model is clearly misspecified. What do you do?
 
 `@sct`
 ```{r}
-
+{
+msg1 <- "Nice one!"
+msg2 <- "Not quite, give it another shot."
+msg3 <- "Not good, try again!"
+msg4 <- "Don't be silly!"
+ex() %>% check_mc(1, feedback_msgs = c(msg1, msg2, msg3, msg4))
+}
 ```
 
 ***
@@ -643,7 +660,13 @@ Use the console to plot the residuals as a function of stratio and then as a fun
 
 `@sct`
 ```{r}
-
+{
+msg1 <- "Not quite, give it another shot."
+msg2 <- "Nice one!"
+msg3 <- "Not good, try again!"
+msg4 <- "Not good, try again!"
+ex() %>% check_mc(2, feedback_msgs = c(msg1, msg2, msg3, msg4))
+}
 ```
 
 ***
@@ -704,7 +727,12 @@ Is this model better? Are you satisfied?
 
 `@sct`
 ```{r}
-
+{
+msg1 <- "Not quite, give it another shot."
+msg2 <- "Nice one!"
+msg3 <- "Not good, try again!"
+ex() %>% check_mc(2, feedback_msgs = c(msg1, msg2, msg3))
+}
 ```
 
 ***
@@ -858,7 +886,12 @@ How do you interprete this plot?
 
 `@sct`
 ```{r}
-
+{
+msg1 <- "Not good, try again!"
+msg2 <- "Not quite, give it another shot."
+msg3 <- "Nice one!"
+ex() %>% check_mc(3, feedback_msgs = c(msg1, msg2, msg3))
+}
 ```
 
 ***
@@ -926,7 +959,13 @@ How do you interpret the results of the test? (we use a significance level of 10
 
 `@sct`
 ```{r}
-
+{
+msg1 <- "Nice one!"
+msg2 <- "Not quite, give it another shot."
+msg3 <- "Not good, try again!"
+msg4 <- "Not good, try again!"
+ex() %>% check_mc(1, feedback_msgs = c(msg1, msg2, msg3, msg4))
+}
 ```
 
 ***
@@ -951,7 +990,13 @@ Here we could not reject the validity of the normality assumption. What would be
 
 `@sct`
 ```{r}
-
+{
+msg1 <- "Not quite, give it another shot."
+msg2 <- "Not good, try again!"
+msg3 <- "Nice one!"
+msg4 <- "Not good, try again!"
+ex() %>% check_mc(3, feedback_msgs = c(msg1, msg2, msg3, msg4))
+}
 ```
 
 ---
@@ -1063,7 +1108,13 @@ How do you interpret this figure?
 
 `@sct`
 ```{r}
-
+{
+msg1 <- "Not quite, give it another shot."
+msg2 <- "Not good, try again!"
+msg3 <- "Nice one!"
+msg4 <- "Not good, try again!"
+ex() %>% check_mc(3, feedback_msgs = c(msg1, msg2, msg3, msg4))
+}
 ```
 
 ***
@@ -1125,7 +1176,13 @@ How do you interpret the output?
 
 `@sct`
 ```{r}
-
+{
+msg1 <- "Not quite, give it another shot."
+msg2 <- "Nice one!"
+msg3 <- "Not good, try again!"
+msg4 <- "Not good, try again!"
+ex() %>% check_mc(2, feedback_msgs = c(msg1, msg2, msg3, msg4))
+}
 ```
 
 ***
@@ -1150,7 +1207,13 @@ We must reject the homoscedasticity assumption. What is the consequence?
 
 `@sct`
 ```{r}
-
+{
+msg1 <- "Not quite, give it another shot."
+msg2 <- "Not good, try again!"
+msg3 <- "Nice one!"
+msg4 <- "Not good, try again!"
+ex() %>% check_mc(3, feedback_msgs = c(msg1, msg2, msg3, msg4))
+}
 ```
 
 ***
@@ -1175,7 +1238,13 @@ We must reject the homoscedasticity assumption. What should you do?
 
 `@sct`
 ```{r}
-
+{
+msg1 <- "Nice one!"
+msg2 <- "Not quite, give it another shot."
+msg3 <- "Not good, try again!"
+msg4 <- "Don't be silly!"
+ex() %>% check_mc(1, feedback_msgs = c(msg1, msg2, msg3, msg4))
+}
 ```
 
 ***
@@ -1220,26 +1289,3 @@ coeftest(fit5, vcov.=robust.var)
 ```{r}
 
 ```
-
----
-
-## Insert exercise title here
-
-```yaml
-type: PureMultipleChoiceExercise
-key: efe18a87a5
-xp: 50
-```
-
-test
-
-`@hint`
-
-
-`@possible_answers`
-1. a
-2. [b]
-
-`@feedback`
-1. bad
-2. right
