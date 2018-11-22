@@ -801,7 +801,7 @@ source("http://assets.datacamp.com/production/repositories/4109/datasets/e712d96
 ```yaml
 type: NormalExercise
 key: 45ed78633a
-xp: 25
+xp: 20
 ```
 
 `@instructions`
@@ -836,7 +836,7 @@ plot(fit2, which=2)
 ```yaml
 type: MultipleChoiceExercise
 key: 72b2fa76f1
-xp: 25
+xp: 20
 ```
 
 `@question`
@@ -860,7 +860,7 @@ How do you interprete this plot?
 ```yaml
 type: NormalExercise
 key: 23c43e89e7
-xp: 25
+xp: 20
 ```
 
 `@instructions`
@@ -903,7 +903,7 @@ cvm.test(standard.resid)
 ```yaml
 type: MultipleChoiceExercise
 key: 09923fac3f
-xp: 25
+xp: 20
 ```
 
 `@question`
@@ -914,6 +914,31 @@ How do you interpret the results of the test? (we use a significance level of 10
 2. The p-value is above 10%. The null hypothesis is that the error terms are not normally distributed. Thus, I cannot reject that the error terms are not normally distributed.
 3. W is below 10%. The null hypothesis is that the error terms are normally distributed. Thus, I can reject the validity of the normality assumption.
 4. W is below 10%. The null hypothesis is that the error terms are not normally distributed. Thus, I can reject that the error terms are not normally distributed.
+
+`@hint`
+
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: MultipleChoiceExercise
+key: 31c4571105
+xp: 20
+```
+
+`@question`
+Here we could not reject the validity of the normality assumption. What would be the consequence of a rejection?
+
+`@possible_answers`
+1. The estimated coefficients would be biased in finite samples.
+2. The estimated variance of the estimated coefficients would be biased in finite samples.
+3. [The confidence intervals would not cover the true coefficient with the rate in finite samples.]
+4. All of the above.
 
 `@hint`
 
