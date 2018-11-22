@@ -450,3 +450,52 @@ lines(high_ci[order1]~loe1$x[order1],col="blue")
 ```{r}
 
 ```
+
+---
+
+## Multiple regression: linearity assumption
+
+```yaml
+type: TabExercise
+key: a3732e108e
+xp: 100
+```
+
+We now analyze the multiple regression model.
+
+`@pre_exercise_code`
+```{r}
+CASchools <- read.table("http://assets.datacamp.com/production/repositories/4109/datasets/58d484cd9aa9884502caf2e43cd1db69ab569f89/CASchools.txt")
+CASchools$stratio <- CASchools$students/CASchools$teachers
+CASchools$score <- (CASchools$math + CASchools$read)/2
+source("http://assets.datacamp.com/production/repositories/4109/datasets/2452ec47ee5ae7d60fcadf8ab51780a5a0244e2c/resettest.R")
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: aee3f8d597
+xp: 100
+```
+
+`@instructions`
+Regress score on a constant, stratio, expenditure, english, and lunch. These variables are in the dataset CASchools. Save the regression result in fit2.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+fit2 <- lm(score ~ stratio + expenditure + english + lunch, data = CASchools)
+```
+
+`@sct`
+```{r}
+
+```
